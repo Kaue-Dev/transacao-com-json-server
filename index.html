@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="src/index.css">
+  <title>Consumindo uma API</title>
+</head>
+
+<body>
+  <!--
+    Simular backend com json-server [FEITO]
+    Transações devem possuir id, nome e valor [FEITO]
+    Mostrar na pagína todas as transações do db.json [FEITO]
+    Ter um formulario para criar uma nova transação usando POST [FEITO]
+    Mostrar na tela o saldo total das transações [FEITO]
+    Transações criadas devem aparecer na pagína [FEITO]
+    O saldo total deve sempre aparecer na tela [FEITO]
+    Armazenar transações financeiras [FEITO]
+    Permitir excluir os dados usando DELETE [FEITO]
+    Permitir editar os dados usando PUT [FEITO]
+  -->
+  <main>
+    <form action="http://localhost:3000/transitions" method="post">
+      <h1>Realizar Transação</h1>
+
+      <div class="label-input">
+        <label for="title">Titulo</label>
+        <input type="text" id="title" required>
+      </div>
+
+      <div class="label-input">
+        <label for="value">Valor R$</label>
+        <input type="number" id="value" required>
+      </div>
+
+      <button id="saveButton">SALVAR</button>
+    </form>
+
+    <div id="transitions">
+      <h1>Transações Realizadas</h1>
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Titulo</th>
+            <th>Valor</th>
+            <th></th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="tbody"></tbody>
+      </table>
+      <div class="total-div">Total: R$ <span id="total">0</span></div>
+    </div>
+  </main>
+
+  <script src="src/index.js"></script>
+</body>
+</html>

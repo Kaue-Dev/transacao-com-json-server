@@ -1,0 +1,95 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background-color: #252525;
+  color: #e5e5e5;
+  font-family: system-ui, sans-serif;
+}
+
+body {
+  min-height: 100vh;
+  padding-top: 2rem;
+}
+
+main {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+}
+
+.label-input {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.label-input label {
+  font-size: 18px;
+}
+
+input, 
+#saveButton,
+.editButton, 
+.deleteButton {
+  border: 0;
+  outline: 0;
+}
+
+input {
+  border: 2px solid #513dff;
+  background-color: transparent;
+  padding: .4rem;
+  border-radius: 4px;
+}
+
+#saveButton {
+  background-color: #513dff;
+  padding: .8rem;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+table {
+  border: 3px solid #4f4f4f;
+  margin-top: 1rem;
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+}
+
+th {
+  background-color: #4f4f4f;
+}
+
+.total-div {
+  margin-top: 1rem;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.editButton, .deleteButton {
+  padding: .5rem 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  border-radius: 4px;
+}
+
+.editButton {
+  background-color: #006aff;
+}
+
+.deleteButton {
+  background-color: #ff0000;
+}
